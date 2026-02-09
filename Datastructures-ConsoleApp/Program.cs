@@ -1,5 +1,8 @@
 ﻿namespace Datastructures_ConsoleApp;
 
+using Datastructures_ClassLibrary;
+using Datastructures_ClassLibrary.UnitTesting;
+
 class Program
 {
     static void Main(string[] args)
@@ -27,6 +30,44 @@ class Program
                 //TODO:Add a new choice for each lab and call its 'Menu' method
                 case "U":
                     //UnitTestingExercises.Menu();
+                    Console.WriteLine("overflow demo"); ;
+
+                    short speed = 32760;
+                    for (int i = 0; i < 10; i++)
+                    {
+                        speed++;
+                        Console.WriteLine(speed);
+                    }
+
+                    Console.WriteLine("Hallo, ik ga voor jouw berekenen of een datum echt bestaat!");
+
+                    while (true)
+                    {
+                        Console.WriteLine("Geef een datum in");
+                        //Get date from user
+                        string inputDay = Console.ReadLine();
+                        string inputMonth = Console.ReadLine();
+                        string inputYear = Console.ReadLine();
+
+                        int day = int.Parse(inputDay);
+                        int month = int.Parse(inputMonth);
+                        int year = int.Parse(inputYear);
+
+                        Console.WriteLine("Ok bedankt, ik bereken nu razendsnel of deze geldig is");
+                        bool exists = DateChecker.CheckIfDateExists(day, month, year);
+
+                        Console.Write($"Tadaaa !! {day}/{month}/{year} is .... ");
+                        if (exists)
+                        {
+                            Console.WriteLine(" geldig ! :-)");
+                        }
+                        else
+                        {
+                            Console.WriteLine(" niet geldig ! :-(");
+                        }
+
+                        Console.WriteLine();
+                    }
                     break;
                 case "S":
                     //SortingExercises.Menu();
