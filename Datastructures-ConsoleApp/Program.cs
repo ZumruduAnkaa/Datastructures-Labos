@@ -1,6 +1,8 @@
 ﻿namespace Datastructures_ConsoleApp;
 
 using Datastructures_ClassLibrary;
+using Datastructures_ClassLibrary.Recursion;
+using Datastructures_ClassLibrary.Sorting;
 using Datastructures_ClassLibrary.UnitTesting;
 
 class Program
@@ -70,10 +72,10 @@ class Program
                     }
                     break;
                 case "S":
-                    //SortingExercises.Menu();
+                    SortingExercises.Menu();
                     break;
                 case "R":
-                    //RecursionExercises.Menu();
+                    RecursionExercises.Menu();
                     break;
                 default:
                     Console.WriteLine("Sorry deze keuze wordt pas in een later labo toegevoegd");
