@@ -27,15 +27,14 @@ namespace Datastructures_ClassLibrary.Recursion
 
             if (seconds == 0)
             {
-                Console.WriteLine("Takeoff!");
+                
             }
             else
             {
+                UpCounter(seconds - 1);
                 Console.Write(seconds + "...");
                 Thread.Sleep(1000);
-                DoCountdown(seconds + 1);
             }
-
         }
     }
 }
