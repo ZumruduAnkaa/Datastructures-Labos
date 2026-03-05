@@ -21,5 +21,21 @@ namespace Datastructures_ClassLibrary.Recursion
                 DoCountdown(seconds - 1);  // zichzelf aanroepen!
             }
         }
+
+        public static void UpCounter(int seconds)
+        {
+
+            if (seconds == 0)
+            {
+                Console.WriteLine("Takeoff!");
+            }
+            else
+            {
+                Console.Write(seconds + "...");
+                Thread.Sleep(1000);
+                DoCountdown(seconds + 1);
+            }
+
+        }
     }
 }
