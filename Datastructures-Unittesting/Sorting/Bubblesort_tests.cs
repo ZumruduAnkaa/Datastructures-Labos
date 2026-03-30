@@ -15,11 +15,11 @@ namespace Datastructures_Unittesting.Sorting
         public void Bubblesort_SortsArrayInAscendingOrder()
         {
             // Arrange
-            int[] input = [5, 2, 9, 1, 5, 6];
-            int[] expected = [1, 2, 5, 5, 6, 9];
+            double[] input = [5, 2, 9, 1, 5, 6];
+            double[] expected = [1, 2, 5, 5, 6, 9];
 
             // Act
-            Bubblesort.SortAdaptive(input);
+            Bubblesort.Sort(input);
 
             // Assert
             for (int i = 0; i < input.Length; i++)

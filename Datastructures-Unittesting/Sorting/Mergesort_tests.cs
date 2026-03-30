@@ -96,5 +96,20 @@ namespace Datastructures_Unittesting.Sorting
             // Geen echte Assert nodig, gewoon meten
             Assert.IsTrue(sw.ElapsedMilliseconds >= 0);
         }
+
+
+        [TestMethod]
+        public void Mergesort_SortsStringsByLengthAndAlphabetically()
+        {
+            // Arrange
+            string[] input = ["appel", "ei", "noot", "mies", "wim", "zus", "jet", "teun", "gijs", "aap"];
+            string[] expected = ["ei", "aap", "jet", "wim", "zus", "gijs", "mies", "noot", "teun", "appel"];
+
+            // Act
+            Mergesort.Sort(input);
+
+            // Assert
+            CollectionAssert.AreEqual(expected, input);
+        }
     }
 }

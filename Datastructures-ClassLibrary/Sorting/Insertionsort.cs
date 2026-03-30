@@ -49,7 +49,7 @@ namespace Datastructures_ClassLibrary.Sorting
 
                 for (int i = startIndex; i >= 0; i--)
                 {
-                    if (i > 0 && key.Length < mijnLijst[i - 1].Length)
+                    if (i > 0 && Compare(key, mijnLijst[i - 1]) < 0)
                     {
                         mijnLijst[i] = mijnLijst[i - 1];
                     }
@@ -62,6 +62,23 @@ namespace Datastructures_ClassLibrary.Sorting
                 }
                 startIndex++;
             }
+        }
+
+        /// <summary>
+        /// Compare the 2 words and return a value that indicates their sort order.
+        /// </summary>
+        /// <param name="s1"></param>
+        /// <param name="s2"></param>
+        /// <returns>
+        /// Return -1 if s1 preceeds s2
+        /// Return +1 of s1 follows s2 
+        /// Return 0 if both words occur in the same position
+        /// </returns>
+        private static int Compare(string s1, string s2)
+        {
+            if (s1.Length < s2.Length) return -1;
+            if (s1.Length > s2.Length) return +1;
+            return s1.CompareTo(s2);
         }
     }
 }

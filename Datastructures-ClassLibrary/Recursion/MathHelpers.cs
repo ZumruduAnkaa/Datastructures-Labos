@@ -36,5 +36,33 @@ namespace Datastructures_ClassLibrary.Recursion
 
             return number * CalculateFactorial(number - 1);
         }
+
+        public static uint FibonacciNr(uint n)
+        {
+            if (n == 0)
+            {
+                return 0;
+            }
+            if (n == 1)
+            {
+                return 1;
+            }
+
+            return FibonacciNr(n - 1) + FibonacciNr(n-2);
+        }
+
+        public static string FibonacciSerie(uint count)
+        {
+            if (count == 1)
+            {
+                return "0";
+            }
+
+            string vorigeReeks = FibonacciSerie(count - 1);
+            uint volgendGetal = FibonacciNr(count - 1);
+
+            return vorigeReeks + " " + volgendGetal;
+
+        }
     }
 }

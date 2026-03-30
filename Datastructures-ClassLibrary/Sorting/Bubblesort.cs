@@ -92,7 +92,35 @@ namespace Datastructures_ClassLibrary.Sorting
         /// </returns>
         private static int Compare(double n1, double n2)
         {
+            if (n1 < n2) return -1;
+            if (n1 > n2) return +1;
             return 0;
+        }
+
+        public static void Sort(double[] input)
+        {
+            double[] mijnLijst = input;
+
+            int iterations = mijnLijst.Length - 1;
+
+            if (input is not null)
+            {
+                while (iterations >= 1)
+                {
+                    for (global::System.Int32 i = 0; i < iterations; i++)
+                    {
+                        double item1 = mijnLijst[i];
+                        double item2 = mijnLijst[i + 1];
+                        if (Compare(item1, item2) > 0) 
+                        {
+                            mijnLijst[i] = item2;
+                            mijnLijst[i + 1] = item1;
+                        }
+                    }
+                    iterations--;
+                }
+            }
+
         }
     }
 }

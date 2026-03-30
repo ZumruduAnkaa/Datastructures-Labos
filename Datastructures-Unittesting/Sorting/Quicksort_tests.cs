@@ -16,8 +16,8 @@ namespace Datastructures_Unittesting.Sorting
             public void Quicksort_SortsArrayInAscendingOrder()
             {
                 // Arrange
-                int[] input = [5, 2, 9, 1, 5, 6];
-                int[] expected = [1, 2, 5, 5, 6, 9];
+                double[] input = [5.5, 2.1, 8.3, 1.9];
+                double[] expected = [1.9, 2.1, 5.5, 8.3];
 
                 // Act
                 Quicksort.Sort(input);

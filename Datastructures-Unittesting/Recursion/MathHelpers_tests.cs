@@ -57,5 +57,49 @@ namespace Datastructures_Unittesting.Recursion
         {
             MathHelpers.CalculateFactorial(-1);
         }
+
+
+        [TestMethod]
+        public void FibonacciNr_Zero_Returns0()
+        {
+            Assert.AreEqual((uint)0, MathHelpers.FibonacciNr(0));
+        }
+
+        [TestMethod]
+        public void FibonacciNr_One_Returns1()
+        {
+            Assert.AreEqual((uint)1, MathHelpers.FibonacciNr(1));
+        }
+
+        [TestMethod]
+        public void FibonacciNr_Six_Returns8()
+        {
+            Assert.AreEqual((uint)8, MathHelpers.FibonacciNr(6));
+        }
+
+        [TestMethod]
+        public void FibonacciNr_Seven_Returns13()
+        {
+            Assert.AreEqual((uint)13, MathHelpers.FibonacciNr(7));
+        }
+
+
+        [TestMethod]
+        public void FibonacciSerie_One_Returns0()
+        {
+            Assert.AreEqual("0", MathHelpers.FibonacciSerie(1));
+        }
+
+        [TestMethod]
+        public void FibonacciSerie_Three_Returns011()
+        {
+            Assert.AreEqual("0 1 1", MathHelpers.FibonacciSerie(3));
+        }
+
+        [TestMethod]
+        public void FibonacciSerie_Five_Returns01123()
+        {
+            Assert.AreEqual("0 1 1 2 3", MathHelpers.FibonacciSerie(5));
+        }
     }
 }

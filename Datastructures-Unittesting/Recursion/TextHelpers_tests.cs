@@ -26,5 +26,19 @@ namespace Datastructures_Unittesting.Recursion
         {
             Assert.AreEqual("", TextHelpers.ReverseText(""));
         }
+
+
+        [TestMethod]
+        public void SplitString_ReturnsCorrectListOfChars()
+        {
+            // Arrange
+            List<char> expected = ['h', 'a', 'l', 'l', 'o'];
+
+            // Act
+            List<char> result = TextHelpers.SplitString("hallo");
+
+            // Assert
+            CollectionAssert.AreEqual(expected, result);
+        }
     }
 }

@@ -33,5 +33,25 @@ namespace Datastructures_ClassLibrary.Recursion
             }
 
         }
+
+        public static List<char> SplitString(string word)
+        {
+            List<char> list = new List<char>();
+            SplitString(word, list);
+            return list;
+        }
+
+        private static void SplitString(string word, List<char> list)
+        {
+            if (word == "")
+            {
+                
+            }
+            else
+            {
+                list.Add(word[0]);
+                SplitString(word.Substring(1), list);
+            }
+        }
     }
 }
