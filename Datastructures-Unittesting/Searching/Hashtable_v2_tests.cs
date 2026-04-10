@@ -34,7 +34,6 @@ namespace Datastructures_Unittesting.Searching
 
             Assert.AreNotEqual(-1, result);
             Assert.AreNotEqual(-1, result2);
-
         }
     }
 }
