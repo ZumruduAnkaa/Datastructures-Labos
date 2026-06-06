@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datastructures_ClassLibrary.LineairStructures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,6 +53,19 @@ namespace Datastructures_ClassLibrary.Recursion
                 list.Add(word[0]);
                 SplitString(word.Substring(1), list);
             }
+        }
+
+
+        //Oefening: Tekst omkeren (recursief) naar een Queue
+        public static void ReverseText(string text, QueueString queue)
+        {
+            if (text == "")
+            {
+                return;
+            }
+
+            ReverseText(text.Substring(1), queue);
+            queue.Enqueue(text[0].ToString());
         }
     }
 }

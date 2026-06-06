@@ -77,6 +77,9 @@ class Program
                 case "R":
                     RecursionExercises.Menu();
                     break;
+                case "Q":
+                    LineairStructuresExercises.Menu();
+                    break;
                 default:
                     Console.WriteLine("Sorry deze keuze wordt pas in een later labo toegevoegd");
                     Thread.Sleep(1000);
