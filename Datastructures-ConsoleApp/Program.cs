@@ -80,6 +80,9 @@ class Program
                 case "Q":
                     LineairStructuresExercises.Menu();
                     break;
+                case "L":
+                    NonLineairStructuresExercises.Menu();
+                    break;
                 default:
                     Console.WriteLine("Sorry deze keuze wordt pas in een later labo toegevoegd");
                     Thread.Sleep(1000);
